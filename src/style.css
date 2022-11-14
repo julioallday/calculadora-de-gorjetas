@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Space Mono', monospace;
+}
+body {
+    background-color: hsl(185, 41%, 84%);
+}
+.fonte-input {
+    font-size: 24px;
+
+}
+.largura-titulo {
+    width: 10rem;
+}
+.altura-botoes {
+    height: 2.5rem;
+}
+.cinza-escuro {
+    color: hsl(183, 100%, 15%);
+}
+.cinza-super-escuro:focus {
+    background-color: hsl(183, 100%, 15%);
+}
+.fundo-branco {
+    background-color: hsl(0, 0%, 100%);
+}
+.fundo-cinza-escuro {
+    background-color: hsl(183, 100%, 15%);
+}
+.fundo-cinza-claro{
+    background-color: hsl(189, 41%, 97%);
+}
+.texto-branco {
+    color: hsl(189, 41%, 97%);
+}
+.texto-cinza-claro {
+    color: hsl(186, 14%, 43%);
+}
+.borda-arredondada-acima {
+    border-radius: 18px 18px 0px 0px;
+}
+.borda-arredondada-abaixo {
+    border-radius: 0px 0px 18px 18px;
+}
