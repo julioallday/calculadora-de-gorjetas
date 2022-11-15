@@ -8,6 +8,11 @@
 body {
     background-color: hsl(185, 41%, 84%);
 }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
 .fonte-input {
     font-size: 24px;
 
@@ -44,4 +49,8 @@ body {
 }
 .borda-arredondada-abaixo {
     border-radius: 0px 0px 18px 18px;
+}
+.texto-branco-grande {
+    color:aliceblue;
+    font-size: 2rem;
 }

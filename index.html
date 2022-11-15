@@ -28,7 +28,9 @@
                 class="form-control fonte-input fundo-cinza-claro"
                 name="bill"
                 id="bill"
-                placeholder="$" />
+                placeholder="0,00"
+                dir="rtl"
+                step="0.01" />
             </div>
             <div class="gorjetas my-4">
               <span class="cinza-escuro"> Select tip %</span>
@@ -46,7 +48,9 @@
                 class="form-control w-100 cinza-escuro fundo-cinza-claro"
                 type="number"
                 name="numero-pessoas"
-                id="numero-pessoas" />
+                id="numero-pessoas"
+                oninput="atualizaDados()"
+                dir="rtl" />
             </div>
           </div>
           <div class="resultados fundo-cinza-escuro borda-arredondada-abaixo">
@@ -59,7 +63,7 @@
                 </div>
                 <div
                   class="resultado-gorjeta col text-end d-flex align-items-center justify-content-end">
-                  <span id="gorjeta-pessoa">0.00</span>
+                  <span id="gorjeta-pessoa" class="texto-branco-grande">0.00</span>
                 </div>
               </div>
               <div class="total-geral row mb-4">
@@ -69,13 +73,14 @@
                   <span class="texto-cinza-claro">/person</span>
                 </div>
                 <div
-                  id="total-geral"
                   class="resultado-geral col text-end d-flex align-items-center justify-content-end">
-                  <span>0.00</span>
+                  <span id="total-geral" class="texto-branco-grande">0.00</span>
                 </div>
               </div>
               <div class="row">
-                <button type="button" class="btn">RESET</button>
+                <button type="button" class="btn" onclick="recarregaPagina()">
+                  RESET
+                </button>
               </div>
             </div>
           </div>
