@@ -99,7 +99,6 @@ function lidarClick() {
   }
   console.log(usuarioClicou);
   return usuarioClicou;
-  
 }
 
 function botaoCustom() {
@@ -117,32 +116,27 @@ function botaoCustom() {
 
 function transformaBotao() {
   lidarClick();
-  if (usuarioClicou){
-  let el_botaoPorcentagem = document.getElementById(propBotao[2].id);
-  el_botaoPorcentagem.remove();
-  let el_input = document.createElement("input");
-  el_input.setAttribute("type", "number");
-  el_input.setAttribute("id", propBotao[2].id);
-  el_input.setAttribute("class", propBotao[2].class);
-  el_porcentagemCustom = document.getElementById(propBotao[2].id);
-  el_porcentagemCustom = el_input.setAttribute(
-    "oninput",
-    "atualizaDadosCustom()"
-  );
-  let el_divBotoes = document.getElementById("botoes");
-  el_divBotoes.appendChild(el_input);
-  
-
-}
-}
-
-function desativaBotao() {
-  
+  if (usuarioClicou) {
+    let el_botaoPorcentagem = document.getElementById(propBotao[2].id);
+    el_botaoPorcentagem.remove();
+    let el_input = document.createElement("input");
+    el_input.setAttribute("type", "number");
+    el_input.setAttribute("id", propBotao[2].id);
+    el_input.setAttribute("class", propBotao[2].class);
+    el_porcentagemCustom = document.getElementById(propBotao[2].id);
+    el_porcentagemCustom = el_input.setAttribute(
+      "oninput",
+      "atualizaDadosCustom()"
+    );
+    let el_divBotoes = document.getElementById("botoes");
+    el_divBotoes.appendChild(el_input);
+  }
 }
 
 function atualizaDados(dados) {
   calculaGorjetas(dados);
 }
+
 function atualizaDadosCustom() {
   calculaGorjetasCustom();
 }
@@ -156,7 +150,7 @@ function calculaGorjetas(percent) {
 
   let totalPuro = parseInt(el_bill.value) / parseInt(el_pessoas.value);
   let isANumber = totalPuro > 0;
-  let gorjeta = (totalPuro * parseInt(percent)) / 100;
+  let gorjeta = totalPuro * (parseInt(percent) / 100);
   let total_geral = totalPuro + gorjeta;
 
   totalPorPessoa = total_geral / el_pessoas.value;
@@ -167,6 +161,7 @@ function calculaGorjetas(percent) {
     //   el_gorjetaPessoa.innerText = gorjeta.toFixed(2);
   }
 }
+
 function calculaGorjetasCustom() {
   el_bill = document.getElementById("bill");
   el_bill;
@@ -186,9 +181,9 @@ function calculaGorjetasCustom() {
   if (isANumber) {
     mostraValores(el_total_geral, totalPorPessoa);
     mostraValores(el_gorjetaPessoa, gorjeta);
-    
   }
 }
+
 function mostraValores(valor1, valor2) {
   if (!valor2) {
     return;
@@ -196,7 +191,6 @@ function mostraValores(valor1, valor2) {
     valor1.innerText = valor2.toFixed(2);
   }
 }
-function recarregaPagina(){
+function recarregaPagina() {
   window.location.reload(true);
-  
 }
