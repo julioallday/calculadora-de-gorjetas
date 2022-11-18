@@ -2,7 +2,7 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,69 +12,83 @@
     <title>Gorjetas</title>
   </head>
   <body>
-    <main class="container my-4">
-      <div class="d-flex flex-row justify-content-center">
-        <h1 class="my-2 cinza-escuro">
-          S P L I <br />
-          T T E R
-        </h1>
-      </div>
-      <div class="calculadora">
-        <div class="row justify-content-center align-items-center mx-auto">
-          <div class="calculos p-3 fundo-branco borda-arredondada-acima">
-            <div class="mb-3">
-              <label for="bill" class="form-label cinza-escuro">Bill</label>
-              <input
-                type="number"
-                class="form-control fonte-input fundo-cinza-claro"
-                name="bill"
-                id="bill"
-                placeholder="0,00"
-                dir="rtl"
-                step="0.01" />
-            </div>
-            <div class="gorjetas my-4">
-              <span class="cinza-escuro"> Select tip %</span>
-              <div id="botoes" class="row justify-content-around mt-1">
-                <!-- Botões renderizados -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="d-flex justify-content-center">
+          <h1 class="my-2 cinza-escuro">
+            S P L I <br />
+            T T E R
+          </h1>
+        </div>
+        <div class="calculadora row">
+          <div
+            class="calculos justify-content-center largura-conteudo borda-arredondada fundo-branco align-items-center mx-auto">
+            <div class="row">
+              <div class="bill mx-auto">
+                <label for="bill" class="form-label cinza-escuro">Bill</label>
+                <input
+                  type="number"
+                  class="form-control fonte-input fundo-cinza-claro"
+                  name="bill"
+                  id="bill"
+                  placeholder="0"
+                  dir="rtl"
+                  step="0.01"
+                  value="100" />
+              </div>
+              <div class="numero-pessoas cinza-escuro my-3">
+                <label for="numero-pessoas"> Number of People</label>
+                <input
+                  class="form-control w-100 cinza-escuro fonte-input fundo-cinza-claro"
+                  type="number"
+                  name="numero-pessoas"
+                  id="numero-pessoas"
+                  dir="rtl"
+                  placeholder="0"
+                  value="2" />
+              </div>
+              <div class="gorjetas my-4">
+                <span class="cinza-escuro"> Select tip %</span>
+                <div
+                  id="botoes"
+                  class="row justify-content-between mt-1 largura-conteudo mx-auto">
+                  <!-- Botões renderizados -->
+                </div>
               </div>
             </div>
-            <div class="numero-pessoas cinza-escuro my-3">
-              <label for="numero-pessoas"> Number of People</label>
-              <input
-                class="form-control w-100 cinza-escuro fundo-cinza-claro"
-                type="number"
-                name="numero-pessoas"
-                id="numero-pessoas"
-                dir="rtl" />
-            </div>
-          </div>
-          <div class="resultados fundo-cinza-escuro borda-arredondada-abaixo">
-            <div class="container my-3">
-              <div class="gorjeta-total row">
-                <div class="gorjeta-total col my-3">
-                  <span class="texto-branco"> Tip amount</span>
-                  <br />
+
+            <div
+              class="resultados row justify-content-center fundo-cinza-escuro borda-arredondada mx-auto">
+              <div class="gorjeta-total my-3 row justify-content-between">
+                <div class="col-6"><span class="texto-branco"> Tip amount</span>
+                  
                   <span class="texto-cinza-claro">/person</span>
                 </div>
-                <div
-                  class="resultado-gorjeta col text-end d-flex align-items-center justify-content-end">
-                  <span id="gorjeta-pessoa" class="texto-branco-grande">0.00</span>
+                <div class="col-6 text-end">
+                <span id="gorjeta-pessoa" class="texto-branco-grande"
+                  >0.00</span
+                >
                 </div>
               </div>
-              <div class="total-geral row mb-4">
-                <div class="total-geral col">
-                  <span class="texto-branco"> Total</span>
-                  <br />
-                  <span class="texto-cinza-claro">/person</span>
-                </div>
-                <div
-                  class="resultado-geral col text-end d-flex align-items-center justify-content-end">
+  
+                <div class="total-geral my-3 row justify-content-between">
+                  <div class="col-6">
+                    <span class="texto-branco"> Total</span>
+                    
+                    <span class="texto-cinza-claro">/person</span>
+                  </div>
+                  <div
+                  class="col-6 text-end">
                   <span id="total-geral" class="texto-branco-grande">0.00</span>
+
                 </div>
               </div>
-              <div class="row">
-                <button type="button" class="btn" onclick="recarregaPagina()">
+              <div
+                class="d-flex flex-column justify-content-center w-50 mx-auto">
+                <button
+                  type="button"
+                  class="btn col"
+                  onclick="recarregaPagina()">
                   RESET
                 </button>
               </div>
@@ -82,7 +96,7 @@
           </div>
         </div>
       </div>
-    </main>
+    </div>
     <script src="./script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
