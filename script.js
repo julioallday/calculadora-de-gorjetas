@@ -158,8 +158,8 @@ function calculaGorjetas(percent) {
 
   totalPorPessoa = total_geral / el_pessoas.value;
   if (isANumber == "number") {
-    mostraValores(el_total_geral, totalPorPessoa);
-    mostraValores(el_gorjetaPessoa, gorjeta);
+    mostraValores(el_total_geral, parseFloat(totalPorPessoa.toString()));
+    mostraValores(el_gorjetaPessoa, parseFloat(gorjeta.toString()));
     resultadoGorjeta = gorjeta;
     resultado = totalPorPessoa;
   }
