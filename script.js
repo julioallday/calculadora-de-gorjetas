@@ -15,19 +15,19 @@ let propBotao = [
     id: "botao-gorjeta",
     type: "button",
     class:
-      "fonte-input texto-branco fundo-cinza-escuro altura-botoes col-5 btn py-0 btn-primary px-0 my-2",
+      "fonte-input texto-branco fundo-cinza-escuro fundo-verde-claro border borda-arredondada-botao altura-botoes col-5 py-0 px-0 my-2",
   },
   {
     id: "botao-gorjeta-custom",
     type: "button",
     class:
-      "texto-cinza-claro fundo-cinza-claro fonte-input altura-botoes col-5 btn py-0 py-0 btn-primary px-0 my-2",
+      "texto-cinza-claro fundo-cinza-claro fonte-input fundo-verde-claro border borda-arredondada-botao altura-botoes col-5 py-0 py-0 p-0 my-2",
   },
   {
     id: "botao-gorjeta-custom",
     type: "input",
     class:
-      "texto-cinza-claro fundo-cinza-claro fonte-input altura-botoes col-5 btn py-0 py-0 btn-primary px-0 my-2",
+      "texto-cinza-claro fundo-cinza-claro fonte-input fundo-verde-claro borda-arredondada-botao altura-botoes col-5 py-0 py-0  px-0 my-2",
   },
 ];
 async function mapBotoesList() {
@@ -126,8 +126,9 @@ function transformaBotao() {
     el_input.setAttribute("type", "number");
     el_input.setAttribute("id", propBotao[2].id);
     el_input.setAttribute("class", propBotao[2].class);
+    el_input.setAttribute("dir", "rtl");
     el_botaoPorcentagemCustom = document.getElementById(propBotao[2].id);
-    el_botaoPorcentagemCustom = el_input.setAttribute(
+    el_input.setAttribute(
       "oninput",
       "atualizaDadosCustom()"
     );
